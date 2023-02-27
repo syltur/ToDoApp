@@ -2,17 +2,15 @@ import styles from './CardForm.module.scss';
 import Button from '../Button/Button';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { addCard } from '../../redux/store';
 import shortid from 'shortid';
 
-const CardForm = props => {
+const CardForm = (props) => {
 const [title, setTitle] = useState('');
 const dispatch = useDispatch();
 const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch({
-      type: 'ADD_CARD',
-      payload: { id: shortid(), columnId: props.columnId, title },
-    });
+    dispatch(addCard({ id: shortid(), columnId: props.columnId, title }));
     setTitle('');
   };
 
