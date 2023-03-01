@@ -1,0 +1,14 @@
+@import '../../styles/settings.scss';
+
+nav {
+  background-color: darken($color-dark, 3%);
+}
+.navbarInner {
+    justify-content: space-between;
+    i {
+      font-size: 24px;
+    }
+    li {
+        display: inline-block;
+    }
+}
