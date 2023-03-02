@@ -1,10 +1,11 @@
 import Container from './components/Container/Container';
-import Navbar from './components/Navbar/Navbar';
+import { Navbar } from './components/Navbar/Navbar';
 import { Home } from './components/Home/Home';
 import { Favorite } from './components/Favorite/Favorite';
 import { About } from './components/About/About';
 import { NotFound } from './components/NotFound/NotFound';
 import { Routes, Route } from 'react-router-dom';
+import { List } from './components/List/List.js';
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Navbar />
       <Container>
         <Routes>
+         <Route path='/list/:listId' element={<List />} />
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/favorite" element={<Favorite />} />
