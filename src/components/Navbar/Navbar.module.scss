@@ -5,10 +5,19 @@ nav {
 }
 .navbarInner {
     justify-content: space-between;
+    align-items: center;
+    display: flex;
     i {
       font-size: 24px;
+      color: white;
     }
     li {
-        display: inline-block;
+      margin-right: 10px;
+      display: inline-block;
+      a {
+        text-decoration: none;
+        color: $color-light;
+        font-weight: bold;
+      }
     }
 }

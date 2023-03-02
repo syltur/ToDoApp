@@ -2,7 +2,7 @@ import styles from './Navbar.module.scss';
 import Container from '../Container/Container';
 
 const Navbar = () => {
-    <nav>
+    return (<nav>
       <Container>
             <div className={styles.navbarInner}>
                 <a href='/'>
@@ -17,6 +17,7 @@ const Navbar = () => {
             </div>
         </Container>
     </nav>
+    )
 };
 
 export default Navbar;
