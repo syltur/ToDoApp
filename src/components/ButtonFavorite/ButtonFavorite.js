@@ -10,9 +10,7 @@ export const ButtonFavorite = (props) => {
         props.isFavorite && styles.favorite
       )}
       type='text'
-      onClick={props.handleClick}
-    >
-      {props.children}
+      onClick={props.handleClick}>
     </button>
   );
 };
